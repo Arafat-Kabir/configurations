@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 # Base16 - Gnome Terminal color scheme install script
 
+
+echo "Manually adjust the terminal background and default black color"
+echo "then set the following colors:"
+echo "DefaultText = 255,255,255 (#FFFFFF)"
+echo "DefaultBold = 160,255,185 (#A0FFB9)"
+echo "CursorColor = 180,180,180 (#B4B4B4)"
+echo "CursorText  = 0,0,0 (#000)"
+
+
 [[ -z "$PROFILE_NAME" ]] && PROFILE_NAME="terminal.sexy"
 [[ -z "$PROFILE_SLUG" ]] && PROFILE_SLUG="terminal-dot-sexy"
 [[ -z "$DCONF" ]] && DCONF=dconf
@@ -58,10 +67,10 @@ if which "$DCONF" > /dev/null 2>&1; then
 
         # update profile values with theme options
         dset visible-name "'$PROFILE_NAME'"
-        dset palette "['#141414', '#ff0082', '#00a0a0', '#ffc800', '#8ca5ff', '#aa64ff', '#00c3f0', '#3c3c3c', '#a0a0a0', '#ff000a', '#00ff00', '#ff6432', '#7d73ff', '#be96ff', '#00ffff', '#ffffff']"
-        dset background-color "'#141414'"
-        dset foreground-color "'#ffffff'"
-        dset bold-color "'#ffffff'"
+        dset palette "['#14141e', '#ff0082', '#00aa78', '#faff64', '#3232ff', '#9646ff', '#0096b4', '#3c3c3c', '#a0a0a0', '#ff6464', '#00ff00', '#ffb400', '#7882ff', '#be96ff', '#00ffff', '#ffffff']"
+        dset background-color "'#14141e'"
+        dset foreground-color "'#c5c8c6'"
+        dset bold-color "'#c5c8c6'"
         dset bold-color-same-as-fg "true"
         dset use-theme-colors "false"
         dset use-theme-background "false"
@@ -108,10 +117,10 @@ glist_append() {
 glist_append string /apps/gnome-terminal/global/profile_list "$PROFILE_SLUG"
 
 gset string visible_name "$PROFILE_NAME"
-gset string palette "#141414:#ff0082:#00a0a0:#ffc800:#8ca5ff:#aa64ff:#00c3f0:#3c3c3c:#a0a0a0:#ff000a:#00ff00:#ff6432:#7d73ff:#be96ff:#00ffff:#ffffff"
-gset string background_color "#141414"
-gset string foreground_color "#ffffff"
-gset string bold_color "#ffffff"
+gset string palette "#14141e:#ff0082:#00aa78:#faff64:#3232ff:#9646ff:#0096b4:#3c3c3c:#a0a0a0:#ff6464:#00ff00:#ffb400:#7882ff:#be96ff:#00ffff:#ffffff"
+gset string background_color "#14141e"
+gset string foreground_color "#c5c8c6"
+gset string bold_color "#c5c8c6"
 gset bool   bold_color_same_as_fg "true"
 gset bool   use_theme_colors "false"
 gset bool   use_theme_background "false"
@@ -120,3 +129,4 @@ unset PROFILE_NAME
 unset PROFILE_SLUG
 unset DCONF
 unset UUIDGEN
+
