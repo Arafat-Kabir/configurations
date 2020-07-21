@@ -1,0 +1,26 @@
+########################################
+# Author: MD Arafat Kabir              #
+# Email : arafat.sun@gmail.com         #
+# Date  : Tue Jul 21 02:28:58 CDT 2020 #
+# Basic bash settings for convenience  #
+########################################
+
+# Terminal Settings
+HISTSIZE=5000
+PS1='\[\033[01;32m\]\u@\h\[\033[01;97m\]:\[\033[01;34m\] \W \$\[\033[00m\] '
+
+
+# Aliases
+alias tree='tree -A'
+alias ipython='ipython --colors=linux'
+alias ipython3='ipython3 --colors=linux'
+alias vim='vim -p'
+alias df='df -h'
+
+alias ls ='ls --color=auto'
+alias ll ='ls -lh'
+alias la ='ls -a'
+alias lS ='ls -lSh'
+alias lla='ls -lha'
+alias lld='ls -lhd */'
+alias ltr='ls -ltrh'

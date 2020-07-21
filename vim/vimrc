@@ -1,0 +1,69 @@
+"---------------------------------------
+" Author: MD Arafat Kabir              -
+" Email : arafat.sun@gmail.com         -
+" Date  : Tue Jul 21 02:30:20 CDT 2020 -
+" My basic Vim settings                -
+"---------------------------------------
+
+" -------- Behavioral settings --------
+set number
+set nowrap
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+set smartindent
+set mouse=a
+set pastetoggle=<F2>
+set ignorecase
+set wildmenu
+set path+=**
+set laststatus=2
+let g:netrw_liststyle=3
+
+
+
+" -------- Appearance Settings --------
+" Syntax highlighting colorscheme
+" Must be applied before any other appearance settings
+syntax on
+colorscheme koehler
+hi  Visual       ctermbg=White     ctermfg=DarkGray
+hi  VisualNOs    ctermbg=White     ctermfg=Black
+hi  Normal                         ctermfg=White
+hi  Comment                        ctermfg=DarkGray
+hi  Statement                      ctermfg=DarkRed
+hi  LineNr                         ctermfg=DarkGreen
+
+" Tabline appearance
+hi  TablineFill  ctermbg=DarkGray  ctermfg=DarkGray
+hi  TablineSel   ctermbg=Black     ctermfg=White   
+hi  Tabline      ctermbg=Gray      ctermfg=Black     cterm=None
+
+" Statusline and window splitting appearance
+hi  Statusline   ctermbg=Black     ctermfg=Green
+hi  StatuslineNC ctermbg=DarkCyan  ctermfg=Black
+hi  VertSplit    ctermbg=Cyan      ctermfg=Black
+set fillchars=stl:-,stlnc:-,vert:\|
+
+
+
+" -------- Key Bindings and mappings --------
+"Normal mode mappings
+nmap -- :set relativenumber!<CR>
+nmap __ :set number!<CR>
+nmap ,, :set wrap!<CR>:set linebreak!<CR>
+
+
+"Code snippets for C/C++
+iabbrev {}} {<CR>}<ESC>k$a
+iabbrev {}; {<CR>};<ESC>k$a
+iabbrev fori for(int i=0; i <<++>; i++) {<CR>}<ESC>k0/<++><CR>cf>
+iabbrev forj for(int j=0; j <<++>; j++) {<CR>}<ESC>k0/<++><CR>cf>
+iabbrev fork for(int k=0; k <<++>; k++) {<CR>}<ESC>k0/<++><CR>cf>
+
+
+"Code snippets for python
+iabbrev forx for x in<++>:<CR>print x<ESC>k$F<cf>
+
+

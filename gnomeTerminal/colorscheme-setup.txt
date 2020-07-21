@@ -1,0 +1,4 @@
+How to configure the gui terminals in linux GUI environment,
+- Set the colorscheme to tango.
+- Change the background color as needed (probably the window border color).
+- Match the black color with the background color.
